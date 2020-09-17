@@ -6,7 +6,6 @@ Background:
 
 @Scenario1
   Scenario: Verify links on how to avoid the preference payment trap page
-  #Given that  I'm on creditorwatch home page
   When i select "Risk Management" of categories dropdown
   Then i should go to risk management page
   When i click How to Avoid the Preference Payment Trap
