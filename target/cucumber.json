@@ -1,0 +1,151 @@
+[
+  {
+    "line": 1,
+    "elements": [
+      {
+        "line": 3,
+        "name": "",
+        "description": "",
+        "type": "background",
+        "keyword": "Background",
+        "steps": [
+          {
+            "result": {
+              "duration": 1138344500,
+              "status": "passed"
+            },
+            "line": 4,
+            "name": "i click blog",
+            "match": {
+              "location": "com.creditorwatch.stepdefinition.test.ValidateLinksTest.i_click_blog() in file:/C:/Automation/Selenium/workspace/atdd-creditorwatch-regression/target/test-classes/"
+            },
+            "keyword": "When "
+          },
+          {
+            "result": {
+              "duration": 2997600,
+              "status": "passed"
+            },
+            "line": 5,
+            "name": "i should go to blog page",
+            "match": {
+              "location": "com.creditorwatch.stepdefinition.test.ValidateLinksTest.i_should_go_to_blog_page() in file:/C:/Automation/Selenium/workspace/atdd-creditorwatch-regression/target/test-classes/"
+            },
+            "keyword": "Then "
+          }
+        ]
+      },
+      {
+        "start_timestamp": "2020-09-17T18:50:13.877Z",
+        "before": [
+          {
+            "result": {
+              "duration": 14331756000,
+              "status": "passed"
+            },
+            "match": {
+              "location": "com.creditorwatch.stepdefinition.test.CucumberHooksTest.setUP() in file:/C:/Automation/Selenium/workspace/atdd-creditorwatch-regression/target/test-classes/"
+            }
+          }
+        ],
+        "line": 8,
+        "name": "Verify links on how to avoid the preference payment trap page",
+        "description": "",
+        "id": "generate-quotes;verify-links-on-how-to-avoid-the-preference-payment-trap-page",
+        "after": [
+          {
+            "result": {
+              "duration": 1355141000,
+              "status": "passed"
+            },
+            "match": {
+              "location": "com.creditorwatch.stepdefinition.test.CucumberHooksTest.tearDown() in file:/C:/Automation/Selenium/workspace/atdd-creditorwatch-regression/target/test-classes/"
+            }
+          }
+        ],
+        "type": "scenario",
+        "keyword": "Scenario",
+        "steps": [
+          {
+            "result": {
+              "duration": 15391742500,
+              "status": "passed"
+            },
+            "line": 10,
+            "name": "i select \"Risk Management\" of categories dropdown",
+            "match": {
+              "arguments": [
+                {
+                  "val": "\"Risk Management\"",
+                  "offset": 9
+                }
+              ],
+              "location": "com.creditorwatch.stepdefinition.test.ValidateLinksTest.i_select_Risk_Management_of_categories_dropdown(String) in file:/C:/Automation/Selenium/workspace/atdd-creditorwatch-regression/target/test-classes/"
+            },
+            "keyword": "When "
+          },
+          {
+            "result": {
+              "duration": 998300,
+              "status": "passed"
+            },
+            "line": 11,
+            "name": "i should go to risk management page",
+            "match": {
+              "location": "com.creditorwatch.stepdefinition.test.ValidateLinksTest.i_should_go_to_risk_management_page() in file:/C:/Automation/Selenium/workspace/atdd-creditorwatch-regression/target/test-classes/"
+            },
+            "keyword": "Then "
+          },
+          {
+            "result": {
+              "duration": 1534144700,
+              "status": "passed"
+            },
+            "line": 12,
+            "name": "i click How to Avoid the Preference Payment Trap",
+            "match": {
+              "location": "com.creditorwatch.stepdefinition.test.ValidateLinksTest.i_click_How_to_Avoid_the_Preference_Payment_Trap() in file:/C:/Automation/Selenium/workspace/atdd-creditorwatch-regression/target/test-classes/"
+            },
+            "keyword": "When "
+          },
+          {
+            "result": {
+              "duration": 999100,
+              "status": "passed"
+            },
+            "line": 13,
+            "name": "i should go to How to Avoid the Preference Payment Trap page",
+            "match": {
+              "location": "com.creditorwatch.stepdefinition.test.ValidateLinksTest.i_should_go_to_How_to_Avoid_the_Preference_Payment_Trap_page() in file:/C:/Automation/Selenium/workspace/atdd-creditorwatch-regression/target/test-classes/"
+            },
+            "keyword": "Then "
+          },
+          {
+            "result": {
+              "error_message": "java.lang.AssertionError: The following asserts failed:\n\t\"https://asic.gov.au/regulatory-resources/insolvency/insolvency-for-creditors/\" is broken! expected [true] but found [false]\r\n\tat org.testng.asserts.SoftAssert.assertAll(SoftAssert.java:47)\r\n\tat org.testng.asserts.SoftAssert.assertAll(SoftAssert.java:31)\r\n\tat com.creditorwatch.stepdefinition.testbase.TestBase.validateHyperLinks(TestBase.java:116)\r\n\tat com.creditorwatch.stepdefinition.test.ValidateLinksTest.all_the_linkTexts_in_the_article_should_be_validated(ValidateLinksTest.java:51)\r\n\tat ✽.all the linkTexts in the article should be validated(///C:/Automation/Selenium/workspace/atdd-creditorwatch-regression/src/test/resources/CW-001-Validate_Links.feature:14)\r\n",
+              "duration": 10691631300,
+              "status": "failed"
+            },
+            "line": 14,
+            "name": "all the linkTexts in the article should be validated",
+            "match": {
+              "location": "com.creditorwatch.stepdefinition.test.ValidateLinksTest.all_the_linkTexts_in_the_article_should_be_validated() in file:/C:/Automation/Selenium/workspace/atdd-creditorwatch-regression/target/test-classes/"
+            },
+            "keyword": "And "
+          }
+        ],
+        "tags": [
+          {
+            "name": "@Scenario1"
+          }
+        ]
+      }
+    ],
+    "name": "Generate quotes",
+    "description": "",
+    "id": "generate-quotes",
+    "keyword": "Feature",
+    "uri": "file:src/test/resources/CW-001-Validate_Links.feature",
+    "tags": []
+  }
+]
