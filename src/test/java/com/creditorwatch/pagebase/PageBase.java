@@ -1,26 +1,18 @@
 package com.creditorwatch.pagebase;
 
 import com.creditorwatch.common.NavBar;
-import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.PageFactory;
 import org.openqa.selenium.support.ui.Select;
 
-import java.net.HttpURLConnection;
-import java.net.URL;
-import java.util.Iterator;
-import java.util.List;
-
 public class PageBase {
-    WebDriver driver;
+    protected WebDriver driver;
     NavBar navBar;
 
-
-
-    public PageBase(WebDriver driver){
+    public PageBase(WebDriver driver) {
         this.driver = driver;
-        navBar = PageFactory.initElements(driver,NavBar.class);
+        navBar = PageFactory.initElements(driver, NavBar.class);
     }
 
     public NavBar getNavBar() {
@@ -42,6 +34,4 @@ public class PageBase {
     public void click(WebElement element) {
         element.click();
     }
-
-
 }

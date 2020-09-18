@@ -9,13 +9,20 @@ public class RiskManagementPage extends PageBase {
     public RiskManagementPage(WebDriver driver) {
         super(driver);
     }
-    @FindBy(xpath="//strong[contains(text(),'Risk Management')]")
-    public WebElement lbl_pgeIdefr_riskManagement;
+    @FindBy(xpath="//strong[contains(text(),'Risk Managementt')]")
+    private WebElement lbl_pageIdentifier;
     @FindBy(xpath="//a[contains(text(),'How to Avoid the Preference Payment Trap')]")
-    public WebElement lnk_howToAvoidPrefPaymntTrp;
+    private WebElement lnk_howToAvoidPrefPaymntTrp;
 
-
-    public void goTohowToAvoidPrefPaymntTrpPage() {
+    public void goToHowToAvoidPrefPaymntTrpPage() {
         click(lnk_howToAvoidPrefPaymntTrp);
+    }
+    public boolean isRiskManagementPage(String title){
+        boolean flag = false;
+        System.out.println("Page Title is: "+driver.getTitle());
+        if (driver.getTitle().equalsIgnoreCase(title)){
+            flag = true;
+        }
+        return flag;
     }
 }

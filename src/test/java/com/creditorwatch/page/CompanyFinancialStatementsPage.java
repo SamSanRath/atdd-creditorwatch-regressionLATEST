@@ -7,10 +7,21 @@ import org.openqa.selenium.support.FindBy;
 
 public class CompanyFinancialStatementsPage extends PageBase {
     @FindBy(xpath="//article[@id='post-7961']")
-    public WebElement content_article;
+    private WebElement content_article;
 
     public CompanyFinancialStatementsPage(WebDriver driver) {
         super(driver);
     }
 
+    public WebElement getContentArticle() {
+        return content_article;
+    }
+
+    public boolean ComFinStatPage(String title) {
+        boolean flag = false;
+        if(driver.getTitle().equalsIgnoreCase(title)){
+            flag = true;
+        }
+        return flag;
+    }
 }

@@ -6,15 +6,22 @@ import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
 
 public class HowToAvoidThePreferencePaymentTrapPage extends PageBase {
-    @FindBy(xpath="//div[@class='entry-content']")
-    public WebElement contentAricle;
+    @FindBy(xpath = "//div[@class='entry-content']")
+    private WebElement contentArticle;
 
     public HowToAvoidThePreferencePaymentTrapPage(WebDriver driver) {
         super(driver);
     }
 
     public WebElement getContentArticle() {
-        return contentAricle;
+        return contentArticle;
     }
 
+    public boolean isHowToAvdPrefPymTrpPage(String title) {
+        boolean flag = false;
+        if (driver.getTitle().equalsIgnoreCase(title)) {
+            flag = true;
+        }
+        return flag;
+    }
 }
