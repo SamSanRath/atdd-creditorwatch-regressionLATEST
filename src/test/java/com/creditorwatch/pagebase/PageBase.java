@@ -1,14 +1,19 @@
 package com.creditorwatch.pagebase;
 
 import com.creditorwatch.common.NavBar;
+import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
+import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.PageFactory;
 import org.openqa.selenium.support.ui.Select;
+import java.util.List;
 
 public class PageBase {
     protected WebDriver driver;
     NavBar navBar;
+    @FindBy(xpath = "//select[@id='cat']")
+    private WebElement drpdwnCategory;
 
     public PageBase(WebDriver driver) {
         this.driver = driver;
@@ -33,5 +38,10 @@ public class PageBase {
 
     public void click(WebElement element) {
         element.click();
+    }
+
+    public List<WebElement> getDrpDwnList() {
+        List<WebElement> options = drpdwnCategory.findElements(By.tagName("option"));
+        return options;
     }
 }

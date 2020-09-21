@@ -7,6 +7,8 @@ import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.chrome.ChromeDriver;
+import org.openqa.selenium.edge.EdgeDriver;
+import org.openqa.selenium.firefox.FirefoxDriver;
 import org.openqa.selenium.remote.BrowserType;
 import org.openqa.selenium.support.events.EventFiringWebDriver;
 import org.testng.asserts.SoftAssert;
@@ -39,9 +41,13 @@ public class TestBase {
             config.load(fileinputstream);
             if (config.getProperty("browserType").equals(BrowserType.FIREFOX)) {
                 WebDriverManager.firefoxdriver().setup();
+                webdriver = new FirefoxDriver();
             } else if (config.getProperty("browserType").equals(BrowserType.CHROME)) {
                 WebDriverManager.chromedriver().setup();
                 webdriver = new ChromeDriver();
+            } else if (config.getProperty("browserType").equals(BrowserType.EDGE)) {
+                WebDriverManager.edgedriver().setup();
+                webdriver = new EdgeDriver();
             }
             driver = new EventFiringWebDriver(webdriver);
             driver.manage().timeouts().implicitlyWait(2000, TimeUnit.SECONDS);

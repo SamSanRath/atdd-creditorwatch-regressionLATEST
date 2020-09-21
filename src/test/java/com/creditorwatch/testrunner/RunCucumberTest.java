@@ -9,7 +9,8 @@ import org.junit.runner.RunWith;
         glue = {"com.creditorwatch.stepdefinition.test"},
         plugin = {"pretty", "html:target/reports/cucumber-pretty", "json:target/cucumber.json"},
         features = {
-                "src/test/resources/CW-001-Validate_Links.feature"
+                "src/test/resources/com/creditorwatch/feature/CW-001-Validate_Links.feature",
+                //"src/test/resources/CW-001-Validate_Linkss.feature"
         },
         tags =
         // OR      --->    {"@SmokeTest,@Regression"} Scenarios which has either of tags will be executed.

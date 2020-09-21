@@ -56,7 +56,7 @@ public class ValidateLinksTest extends TestBase {
     }
 
     @Then("i should go to Due Diligence page and page title should be")
-    public void i_should_go_to_Due_Diligence_page_and_page_title_should_be(List<String> pageTitle) {
+        public void i_should_go_to_Due_Diligence_page_and_page_title_should_be(List<String> pageTitle) {
         String title = pageTitle.get(0);
         DueDiligencePage dueDiligencePage = PageFactory.initElements(driver, DueDiligencePage.class);
         Assert.assertTrue(dueDiligencePage.isDueDiligencePage(title));
@@ -78,5 +78,17 @@ public class ValidateLinksTest extends TestBase {
     public void all_the_linkTexts_in_the_article_of_Company_Financial_Statements_should_be_validated() {
         CompanyFinancialStatementsPage companyFinancialStatementsPage = PageFactory.initElements(driver, CompanyFinancialStatementsPage.class);
         validateHyperLinks(companyFinancialStatementsPage.getContentArticle());
+    }
+
+    @When("i go through categories dropdown one at a time and then all the links should be validated")
+    public void i_go_through_categories_dropdown_one_at_a_time() {
+        BlogPage blogPage = PageFactory.initElements(driver,BlogPage.class);
+
+            for (int i=1;i<blogPage.getDrpDwnList().size();i++) {
+                System.out.println(blogPage.getDrpDwnList().get(i).getText());
+                blogPage.getDrpdwnCategory().sendKeys(blogPage.getDrpDwnList().get(i).getText());
+                //TestBase testBase = PageFactory.initElements(driver, TestBase.class);
+                validateHyperLinks(blogPage.getAreaNewsContent());
+            }
     }
 }

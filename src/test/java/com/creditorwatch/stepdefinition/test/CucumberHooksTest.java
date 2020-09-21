@@ -13,6 +13,7 @@ public class CucumberHooksTest extends TestBase {
         try {
             init();
         } catch (IOException e) {
+            e.getStackTrace().toString();
         }
     }
 
