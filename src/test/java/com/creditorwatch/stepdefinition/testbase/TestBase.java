@@ -68,16 +68,16 @@ public class TestBase {
         logger.info("Links are below: ");
         while (it.hasNext()) {
             linkText = it.next().getAttribute("href");
-            logger.info(linkText);
-            try {
-                huc = (HttpURLConnection) (new URL(linkText).openConnection());
-                huc.setRequestMethod("HEAD");
-                huc.connect();
-                respCode = huc.getResponseCode();
-                logger.info(String.valueOf(respCode));
-                softAssert.assertTrue(respCode < 400, "\"" + linkText + "\" is broken!");
-            } catch (IOException ex) {
-                ex.printStackTrace();
+                logger.info(linkText);
+                try {
+                    huc = (HttpURLConnection) (new URL(linkText).openConnection());
+                    huc.setRequestMethod("HEAD");
+                    huc.connect();
+                    respCode = huc.getResponseCode();
+                    logger.info(String.valueOf(respCode));
+                    softAssert.assertTrue(respCode < 400, "\"" + linkText + "\" is broken!");
+                } catch (IOException ex) {
+                    ex.printStackTrace();
             }
         }
         softAssert.assertAll();

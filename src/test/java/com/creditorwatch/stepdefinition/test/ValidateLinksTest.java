@@ -31,6 +31,13 @@ public class ValidateLinksTest extends TestBase {
         return PageFactory.initElements(driver, RiskManagementPage.class);
     }
 
+/*    @When("i select {string} of categories dropdown")
+    public void i_select_Risk_Management_of_categories_dropdown(String categoryType) throws InterruptedException {
+        BlogPage blogPage = PageFactory.initElements(driver, BlogPage.class);
+        blogPage.selectCategoryDropDwn(categoryType);
+        //return PageFactory.initElements(driver, RiskManagementPage.class);
+    }*/
+
     @Then("i should go to risk management page and page title should be {string}")
     public void i_should_go_to_risk_management_page(String title) {
         RiskManagementPage riskManagementPage = PageFactory.initElements(driver, RiskManagementPage.class);
@@ -89,6 +96,7 @@ public class ValidateLinksTest extends TestBase {
                 blogPage.getDrpdwnCategory().sendKeys(blogPage.getDrpDwnList().get(i).getText());
                 //TestBase testBase = PageFactory.initElements(driver, TestBase.class);
                 validateHyperLinks(blogPage.getAreaNewsContent());
+                //blogPage.drpdwnCategory.click();
             }
     }
 }

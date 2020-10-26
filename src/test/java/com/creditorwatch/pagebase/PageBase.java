@@ -7,6 +7,7 @@ import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.PageFactory;
 import org.openqa.selenium.support.ui.Select;
+
 import java.util.List;
 
 public class PageBase {
@@ -43,5 +44,9 @@ public class PageBase {
     public List<WebElement> getDrpDwnList() {
         List<WebElement> options = drpdwnCategory.findElements(By.tagName("option"));
         return options;
+    }
+
+    public void setText(WebElement element, String text){
+        element.sendKeys(text);
     }
 }
